@@ -4,23 +4,22 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Careers — B.R. Hornung</title>
+  <!-- Poppins (600) for nav / headings -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header class="site-header">
     <div class="container">
-      <div class="brand-wrap">
-        <!-- Inline logo (monogram) -->
-        <svg class="logo" width="48" height="48" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <rect width="64" height="64" rx="8" fill="#0b2f31" />
-          <text x="50%" y="54%" font-family="Georgia, serif" font-size="28" fill="#ffffff" text-anchor="middle">BR</text>
-        </svg>
-        <h1 class="brand">B.R. Hornung</h1>
+      <div class="header-top">
+        <!-- Use companylogo.png as the centered logo -->
+        <img src="companylogo.png" alt="B.R. Hornung logo" class="header-logo">
       </div>
-      <nav class="nav">
-        <a href="#jobs">Open Roles</a>
+
+      <nav class="header-nav" role="navigation" aria-label="Main navigation">
+        <a href="#jobs">Careers</a>
         <a href="#mission">Mission</a>
-        <a href="#contact">Contact</a>
+        <a href="#contact">Contact Us</a>
       </nav>
     </div>
   </header>
@@ -29,40 +28,90 @@
     <section class="hero">
       <div class="container">
         <h2>Careers at B.R. Hornung</h2>
-        <p>Join B.R. Hornung and help shape durable solutions with craftsmanship and integrity.</p>
-        <a class="cta" href="#jobs">View open roles</a>
+        <p>At B.R. Hornung, we value integrity, teamwork, and growth — come be part of a team that puts clients first and supports your career journey.</p>
+        <a class="cta" href="#jobs">Join Us Today -> </a>
+      </div>
+    </section>
+
+    
+
+    <section id="internships" class="container internships">
+      <h3>Undergraduate Internships</h3>
+      <p class="intro-text">Gain real-world accounting experience while still in school. Our undergraduate internship program is designed for college accounting students who want to develop professional skills and make an impact at B.R. Hornung.</p>
+
+      <div class="internship-highlights">
+        <div class="highlight-card">
+          <h4>Program Overview</h4>
+          <p>Work alongside experienced accountants on real client engagements. You'll gain hands-on experience in tax preparation, audit, and accounting services while earning competitive compensation.</p>
+        </div>
+        <div class="highlight-card">
+          <h4>Requirements</h4>
+          <ul>
+            <li>Currently enrolled in an accredited college/university accounting program</li>
+            <li>Minimum 3.0 GPA (preferred)</li>
+            <li>Proficiency in Microsoft Excel and accounting software</li>
+            <li>Strong attention to detail and communication skills</li>
+          </ul>
+        </div>
+        <div class="highlight-card">
+          <h4>What We Offer</h4>
+          <ul>
+            <li>Competitive hourly wage</li>
+            <li>Flexible scheduling to work around your academic calendar</li>
+            <li>Mentorship from CPA professionals</li>
+            <li>Potential for full-time employment upon graduation</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="internship-cta">
+        <p><strong>Ready to start your accounting career?</strong> Apply now to join our team for the upcoming semester or tax season.</p>
+        <a href="#jobs" class="cta">Apply for Internship</a>
+      </div>
+    </section>
+
+    <section id="jobs" class="jobs">
+      <div class="container">
+        <h2 class="careers-title">Open Jobs</h2>
+        <div class="jobs-controls">
+          <input id="searchInput" type="search" placeholder="Search roles, e.g. frontend" aria-label="Search jobs">
+          <select id="filterDept" aria-label="Filter by department">
+            <option value="">All departments</option>
+          </select>
+          <select id="filterLoc" aria-label="Filter by location">
+            <option value="">All locations</option>
+          </select>
+        </div>
+
+        <div id="jobsList" class="jobs-list" aria-live="polite">
+          <!-- Jobs rendered by JS -->
+        </div>
       </div>
     </section>
 
     <section id="mission" class="container mission">
       <h3>Our Mission</h3>
-      <p>Acme Co. makes tools that help teams move faster while staying human. We invest in people and craft.</p>
-    </section>
-
-    <section id="jobs" class="container jobs">
-      <div class="jobs-controls">
-        <input id="searchInput" type="search" placeholder="Search roles, e.g. frontend" aria-label="Search jobs">
-        <select id="filterDept" aria-label="Filter by department">
-          <option value="">All departments</option>
-        </select>
-        <select id="filterLoc" aria-label="Filter by location">
-          <option value="">All locations</option>
-        </select>
-      </div>
-
-      <div id="jobsList" class="jobs-list" aria-live="polite">
-        <!-- Jobs rendered by JS -->
-      </div>
+      <p>B.R. Hornung provides accounting services with the highest level of personalized service, courtesy, and professionalism possible. Our solutions and deep understanding of our clients' needs help develop relationships built on trust, communication, and accessibility.</p>
     </section>
 
     <section id="contact" class="container contact">
-      <h3>Contact</h3>
-      <p>Questions about roles or recruiting? Email us at <a href="mailto:jobs@brhornung.example">jobs@brhornung.example</a>.</p>
+      <div class="contact-cta">
+        <a class="btn" href="mailto:jobs@brhornung.example" aria-label="Contact us">Contact Us</a>
+      </div>
     </section>
   </main>
+  <!-- Bottom header bar (mirrors top header color) -->
+  <div class="bottom-header" role="contentinfo">
+    <div class="container bottom-header-inner">
+      <img src="companylogo.png" alt="B.R. Hornung logo" class="bottom-logo">
+      <div class="bottom-right">
+        <div class="copyright">© <span id="year"></span> B.R. Hornung — All rights reserved.</div>
+      </div>
+    </div>
+  </div>
 
   <footer class="site-footer">
-    <div class="container">© <span id="year"></span> B.R. Hornung — All rights reserved.</div>
+    <div class="container"></div>
   </footer>
 
   <!-- Apply modal -->
@@ -81,7 +130,7 @@
           <input id="applicantEmail" type="email" required>
         </label>
         <label>
-          Cover letter
+          Resume 
           <textarea id="applicantCover" rows="4"></textarea>
         </label>
         <div class="modal-actions">

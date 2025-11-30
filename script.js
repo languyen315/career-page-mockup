@@ -1,7 +1,7 @@
 const jobs = [
-  { id: '1', title: 'Frontend Engineer', dept: 'Engineering', location: 'Remote', type: 'Full-time', summary: 'Build delightful web experiences using React and modern CSS.' },
-  { id: '2', title: 'Product Designer', dept: 'Design', location: 'NYC', type: 'Full-time', summary: 'Design interfaces and experiences that delight our users.' },
-  { id: '3', title: 'Marketing Manager', dept: 'Marketing', location: 'Remote', type: 'Part-time', summary: 'Lead campaigns and growth initiatives.' }
+  { id: '1', title: 'Accounting Clerk', dept: 'Bookkeeping', location: 'Florence, OR', type: 'Full-time', summary: 'Manage daily financial transactions, process invoices, and maintain accurate records.' },
+  { id: '2', title: 'Financial Analyst', dept: 'Consulting', location: 'Florence, OR', type: 'Full-time', summary: 'Analyze financial data, prepare reports, and provide insights to support decision-making.' },
+  { id: '3', title: 'Staff Accountant', dept: 'Audit & Tax', location: 'Remote', type: 'Part-time', summary: 'Prepare and review financial statements, reconcile accounts, and assist with audits and tax tasks.' }
 ];
 
 const jobsList = document.getElementById('jobsList');
