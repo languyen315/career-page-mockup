@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Careers — Acme Co.</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1 class="brand">Acme Co.</h1>
+      <nav class="nav">
+        <a href="#jobs">Open Roles</a>
+        <a href="#mission">Mission</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h2>Join our team</h2>
+        <p>Build meaningful products with people who care. We value collaboration, growth, and impact.</p>
+        <a class="cta" href="#jobs">View open roles</a>
+      </div>
+    </section>
+
+    <section id="mission" class="container mission">
+      <h3>Our Mission</h3>
+      <p>Acme Co. makes tools that help teams move faster while staying human. We invest in people and craft.</p>
+    </section>
+
+    <section id="jobs" class="container jobs">
+      <div class="jobs-controls">
+        <input id="searchInput" type="search" placeholder="Search roles, e.g. frontend" aria-label="Search jobs">
+        <select id="filterDept" aria-label="Filter by department">
+          <option value="">All departments</option>
+        </select>
+        <select id="filterLoc" aria-label="Filter by location">
+          <option value="">All locations</option>
+        </select>
+      </div>
+
+      <div id="jobsList" class="jobs-list" aria-live="polite">
+        <!-- Jobs rendered by JS -->
+      </div>
+    </section>
+
+    <section id="contact" class="container contact">
+      <h3>Contact</h3>
+      <p>Questions about roles or recruiting? Email us at <a href="mailto:jobs@acme.example">jobs@acme.example</a>.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">© <span id="year"></span> Acme Co. — All rights reserved.</div>
+  </footer>
+
+  <!-- Apply modal -->
+  <div id="applyModal" class="modal" aria-hidden="true" role="dialog" aria-labelledby="applyTitle">
+    <div class="modal-panel">
+      <button id="closeModal" class="modal-close" aria-label="Close">×</button>
+      <h4 id="applyTitle">Apply for role</h4>
+      <form id="applyForm">
+        <input type="hidden" id="roleId">
+        <label>
+          Name
+          <input id="applicantName" required>
+        </label>
+        <label>
+          Email
+          <input id="applicantEmail" type="email" required>
+        </label>
+        <label>
+          Cover letter
+          <textarea id="applicantCover" rows="4"></textarea>
+        </label>
+        <div class="modal-actions">
+          <button type="submit" class="btn">Submit application</button>
+          <button type="button" id="cancelApply" class="btn btn-ghost">Cancel</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js" type="module"></script>
+</body>
+</html>
